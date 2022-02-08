@@ -45,7 +45,7 @@ def shell():
         if len(command) == 0:
             continue
         elif command == "exit":
-            connection.send(command)
+            connection.send(command)            
             break
         elif command[:2] == "cd":
             command_cd = command.encode()
