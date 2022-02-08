@@ -41,7 +41,7 @@ def shell():
     global command
     global output2
     while True:
-        command = input("\n Victim:~$ ")
+        command = input("\n Target-pc:~$ ")
         if len(command) == 0:
             continue
         elif command == "exit":
